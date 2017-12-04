@@ -18,7 +18,7 @@ public class LightUp : MonoBehaviour
 		// Assign the initial material of the orb as the default material.
 		defaultMaterial = this.GetComponent<MeshRenderer>().material;
 	}
-		
+
 	// Called when the orb is clicked.
 	// This function can be hooked up in Unity by adding a Pointer Click event trigger to the orb.
 	public void PlayerSelection()
@@ -29,7 +29,7 @@ public class LightUp : MonoBehaviour
 
 		// Get the GVR audio source component on this orb and play the audio.
 		/* Uncomment the line below during 'A Little More Feedback!' lesson.*/
-		// this.GetComponent<GvrAudioSource>().Play();
+		this.GetComponent<GvrAudioSource>().Play();
 	}
 
 	// Called when the reticle moves over the orb.
