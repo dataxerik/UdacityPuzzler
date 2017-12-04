@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1210,11 +1210,11 @@ MonoBehaviour:
   sourceLoop: 1
   sourceMute: 0
   sourcePitch: 1
-  sourcePriority: 128
+  sourcePriority: 52
   sourceSpatialBlend: 1
   sourceDopplerLevel: 1
   sourceSpread: 0
-  sourceVolume: 0.52
+  sourceVolume: 0.237
   sourceRolloffMode: 1
   sourceMaxDistance: 10
   sourceMinDistance: 1
@@ -5140,11 +5140,11 @@ MonoBehaviour:
   sourceLoop: 1
   sourceMute: 0
   sourcePitch: 1
-  sourcePriority: 128
+  sourcePriority: 43
   sourceSpatialBlend: 1
   sourceDopplerLevel: 1
   sourceSpread: 0
-  sourceVolume: 0.52
+  sourceVolume: 0.151
   sourceRolloffMode: 0
   sourceMaxDistance: 500
   sourceMinDistance: 1
