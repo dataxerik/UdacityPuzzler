@@ -66,19 +66,24 @@ public class GameLogic : MonoBehaviour
 	{ 
 		// Disable the start UI.
 		startUI.SetActive(false);
+		eventSystem.SetActive(false);
 
 		// Move the player to the play position.
 		iTween.MoveTo(player, 
 			iTween.Hash(
 				"position", playPoint.transform.position, 
-				"time", 3, 
-				"easetype", "linear"
+				"time", 7, 
+				"easetype", "linear",
+				"oncomplete", "StartPuz",
+				"oncompletetarget", this.gameObject
 			)
 		);
+	}
 
+	void StartPuz() {
 		// Call the DisplayPattern() function repeatedly.
 		CancelInvoke("DisplayPattern");
-		InvokeRepeating("DisplayPattern", 3, puzzleSpeed); 
+		InvokeRepeating("DisplayPattern", 2, puzzleSpeed); 
 
 		// Reset the index the player is trying to solving.
 		currentSolveIndex = 0;
@@ -187,12 +192,12 @@ public class GameLogic : MonoBehaviour
 	{
 		// Enable the restart UI.
 		//restartUI.SetActive(true);
-
+		startUI.SetActive(true);
 		// Move the player to the restart position.
 		iTween.MoveTo(player, 
 			iTween.Hash(
 				"position", restartPoint.transform.position, 
-				"time", 3, 
+				"time", 7, 
 				"easetype", "linear",
 				"oncomplete", "activateRestartUI",
 				"oncompletetarget", this.gameObject
@@ -216,6 +221,6 @@ public class GameLogic : MonoBehaviour
 		currentSolveIndex = 0;
 
 		// Begin the puzzle sequence.
-		StartPuzzle();
+		StartPuz();
 	}
 }
